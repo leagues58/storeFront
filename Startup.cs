@@ -26,10 +26,10 @@ namespace StoreFront
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
 
-            /*app.Run(async (context) =>
+            app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");
-            });*/
+            });
         }
     }
 }
