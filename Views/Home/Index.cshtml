@@ -1,0 +1,22 @@
+﻿@model IEnumerable<StoreFront.Models.Product>
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <h2>@ViewBag.Title</h2>
+
+    @foreach(var product in Model)
+    {
+        <div>
+            <h2>@product.Name</h2>
+            <h3>@product.Price.ToString("c")</h3>
+        </div>
+    }
+</body>
+</html>
