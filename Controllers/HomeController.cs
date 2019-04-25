@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using StoreFront.Models;
+using StoreFront.ViewModels;
+using System.Linq;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -19,11 +17,11 @@ namespace StoreFront.Controllers
         }
         public IActionResult Index()
         {
-            ViewBag.Title = "Product Overview";
+            HomeViewModel model = new HomeViewModel();
+            model.Title = "Product Overview";
+            model.Products = productRepository.GetAllProducts().OrderBy(p => p.Name).ToList();
 
-            var products = productRepository.GetAllProducts().OrderBy(p => p.Name);
-
-            return View(products);
+            return View(model);
         }
     }
 }

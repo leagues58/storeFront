@@ -1,8 +1,8 @@
-﻿@model IEnumerable<StoreFront.Models.Product>
+﻿@model StoreFront.ViewModels.HomeViewModel
 
-<h2>@ViewBag.Title</h2>
+<h2>@Model.Title</h2>
 
-@foreach(var product in Model)
+@foreach(var product in Model.Products)
 {
     <div>
         <h2>@product.Name</h2>
