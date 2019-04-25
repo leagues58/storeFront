@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace StoreFront.Models
 {
-    public class IProductRepository
+    public interface IProductRepository
     {
+        IEnumerable<Product> GetAllProducts();
+        Product GetProductById(int productId);
     }
 }

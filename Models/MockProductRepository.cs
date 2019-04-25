@@ -9,14 +9,34 @@ namespace StoreFront.Models
     {
         private List<Product> products;
 
-        public Product GetProductById(int productId)
+        public MockProductRepository()
         {
-            throw new NotImplementedException();
+            if (products == null)
+            {
+                InitializeProducts();
+            }
         }
 
-        public IEnumerable<Product> GetProducts()
+        private void InitializeProducts()
         {
-            throw new NotImplementedException();
+            products = new List<Product>
+            {
+                new Product {Id = 1, Name = "Contact Lens", Price = 36.00M, ShortDescription = "Put in your eyes to help you see better", LongDescription = "This is the long description for contact lenses.  I refuse to spend too much time mocking this out because I already know it won't be used for very long.", },
+                new Product {Id = 2, Name = "Petit Ecolier Cookies", Price = 4.50M, ShortDescription = "Put in your mouth to taste something good.", LongDescription = "This is the long description for cookies.  I refuse to spend too much time mocking this out because I already know it won't be used for very long.", },
+                new Product {Id = 3, Name = "Computer Monitor", Price = 340.00M, ShortDescription = "Buy several to make yourself seem important", LongDescription = "This is the long description for the computer monitor.  I refuse to spend too much time mocking this out because I already know it won't be used for very long.", },
+                new Product {Id = 4, Name = "Car", Price = 55000.00M, ShortDescription = "Sit in it and go places", LongDescription = "This is the long description for a car.  I refuse to spend too much time mocking this out because I already know it won't be used for very long.", }
+            };
+        }
+
+
+        public Product GetProductById(int productId)
+        {
+            return products.FirstOrDefault(p => p.Id == productId);
+        }
+
+        public IEnumerable<Product> GetAllProducts()
+        {
+            return products;
         }
     }
 }
