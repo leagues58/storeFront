@@ -17,9 +17,11 @@ namespace StoreFront.Controllers
         }
         public IActionResult Index()
         {
-            HomeViewModel model = new HomeViewModel();
-            model.Title = "Product Overview";
-            model.Products = productRepository.GetAllProducts().OrderBy(p => p.Name).ToList();
+            HomeViewModel model = new HomeViewModel()
+            {
+                Title = "Product Overview",
+                Products = productRepository.GetAllProducts().OrderBy(p => p.Name).ToList()
+            };
 
             return View(model);
         }
