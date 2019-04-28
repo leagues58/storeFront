@@ -1,4 +1,4 @@
-﻿@model StoreFront.ViewModels.HomeViewModel
+﻿@model HomeViewModel
 
 <h2>@Model.Title</h2>
 
@@ -9,7 +9,7 @@
         <img src="@product.ThumbnailUrl" alt="" />
         <div class="caption">
             <h4 class="pull-right">@product.Price.ToString("c")</h4>
-            <h3>@product.Name</h3>
+            <h3><a asp-controller="Home" asp-action="Details" asp-route-id="@product.Id">@product.Name</a></h3>
             <p>@product.ShortDescription</p>
         </div>
     </div>

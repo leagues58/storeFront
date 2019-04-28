@@ -25,5 +25,17 @@ namespace StoreFront.Controllers
 
             return View(model);
         }
+
+        public ActionResult Details(int id)
+        {
+            var product = this.productRepository.GetProductById(id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return View(product);
+        }
     }
 }
