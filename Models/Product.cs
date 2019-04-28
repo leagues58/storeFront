@@ -10,5 +10,6 @@
         public string ImageUrl { get; set; }
         public string ThumbnailUrl { get; set; }
         public bool IsOnSale { get; set; }
+        public bool IsInStock { get; set; }
     }
 }
