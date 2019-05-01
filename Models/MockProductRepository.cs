@@ -24,6 +24,7 @@ namespace StoreFront.Models
                 new Product {Id = 3, Name = "Computer Monitor", Price = 340.00M, ShortDescription = "Buy several to make yourself seem important", LongDescription = "This is the long description for the computer monitor.  I refuse to spend too much time mocking this out because I already know it won't be used for very long.", ThumbnailUrl = "/images/monitor.jpg"},
                 new Product {Id = 4, Name = "Car", Price = 55000.00M, ShortDescription = "Sit in it and go places", LongDescription = "This is the long description for a car.  I refuse to spend too much time mocking this out because I already know it won't be used for very long.", ThumbnailUrl = "/images/car.jpg"},
                 new Product {Id = 5, Name = "Headphones", Price = 300.00M, ShortDescription = "Put them over your ears to hear things that aren't happening around you.", LongDescription = "This is the long description for some headphones.  I refuse to spend too much time mocking this out because I already know it won't be used for very long.", ThumbnailUrl = "/images/headphones.jpg"}
+                new Product {Id = 5, Name = "Ice Cream", Price = 5.15M, ShortDescription = "Delicious cold.", LongDescription = "This is the long description for some icecream.  I refuse to spend too much time mocking this out because I already know it won't be used for very long.", ThumbnailUrl = "/images/icecream.jpg"}
             };
         }
 
