@@ -20,5 +20,10 @@ namespace StoreFront.Models
         {
             return this.appDbContext.Products.FirstOrDefault(p => p.Id == productId);
         }
+
+        public Product GetCheapestOnSaleItem()
+        {
+            return this.appDbContext.Products.OrderBy(p => p.Price).FirstOrDefault(p => p.IsOnSale);
+        }
     }
 }
