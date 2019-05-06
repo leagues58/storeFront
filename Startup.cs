@@ -23,6 +23,7 @@ namespace StoreFront
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<IReviewRepository, ReviewRepository>();
             services.AddMvc();
         }
 
