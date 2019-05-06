@@ -11,8 +11,8 @@
 
         public void AddReview(Review review)
         {
-            //this.appDbContext.Reviews.Add(review);
-            //this.appDbContext.SaveChanges();
+            this.appDbContext.Reviews.Add(review);
+            this.appDbContext.SaveChanges();
         }
     }
 }
